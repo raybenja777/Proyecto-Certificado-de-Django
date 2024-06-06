@@ -1,0 +1,181 @@
+/* static/css/styles.css */
+
+body { /* Estilos generales */
+    font-family: Tahoma, sans-serif; /* Fuente de texto */
+    margin: 0; /* Margen */
+    padding: 0; /* Relleno */
+    display: flex; /* Mostrar como flexbox */
+    justify-content: center; /* Alinear horizontalmente */
+    align-items: center; /* Alinear verticalmente */
+    height: 100vh; /* Alto de la pantalla */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+body, html { /* Estilos generales */
+    height: 100%; /* Alto de la pantalla */
+    margin: 0; /* Margen */
+    font-family: Tahoma, sans-serif; /* Fuente de texto */
+}
+
+.video_background { /* Video de fondo */
+    position: fixed; /* Posición fija */
+    top: 0; /* Posición superior */
+    left: 0; /* Posición izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: hidden; /* Ocultar contenido sobrante */
+    z-index: -1; /* Z-index negativo */
+}
+
+.video_background video { /* Video de fondo */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    object-fit: cover; /* Corte de video */
+}
+
+.registro-usuario { /* Contenedor */
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Posición superior */
+    left: 50%; /* Posición izquierda */
+    transform: translate(-50%, -50%); /* Centrar el contenido */
+    background: rgba(255, 255, 255, 0.26); /* Color de fondo */
+    padding: 40px; /* Relleno */
+    border-radius: 10px; /* Borde redondeado */
+    color: #000; /* Color de texto */
+    text-align: center; /* Alinear texto al centro */
+    width: 300px; /* Ancho */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    
+}
+
+.registro-usuario h2 { /* Titulo */
+    margin-bottom: 20px; /* Margen inferior */
+    
+}
+
+.registro-usuario input[type="text"], /* Caja de texto */
+.registro-usuario input[type="password"] { /* Caja de texto */
+    width: 85%; /* Ancho */
+    padding: 8px 10px; /* Espacio alrededor del texto */
+    margin: 15px 5px; /* Margen */
+    border: 0.3vw solid #ccc; /* Borde */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.registro-usuario input[type="submit"] { /* Boton inicio de sesion */
+    width: 80%; /* Ancho del botón */
+    padding: 10px; /* Relleno dentro del botón */
+    margin: 10px 0; /* Margen */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Borde redondeado */
+    background-color: #0a1546; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    
+}
+
+.registro-usuario input[type="submit"]:hover { /* Boton inicio de sesion al pasar por encima */
+    background-color: #437dad; /* Color de fondo al pasar por encima */
+}
+
+.registro-usuario a { /* Boton de registrarse */
+    display: inline-block; /* Mostrar como un bloque en línea */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    background-color: #112355; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-align: center; /* Alinear texto al centro */
+    text-decoration: none; /* Eliminar decoración de enlace */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    font-size: 14px; /* Tamaño de fuente */
+    text-decoration: none !important; /* Eliminar decoración de enlace */
+}
+
+.registro-usuario a:hover { /* Boton de registrarse al pasar por encima */
+    background-color: #4569a0; /* Cambiar color de fondo al pasar sobre el botón */
+}
+
+h2 { /* Titulo */
+    margin-bottom: 20px; /* Margen inferior */
+    color: #000; /* Color de texto */
+}
+
+label { /* Etiqueta */
+    display: block; /* Mostrar como bloque */
+    margin: 0.1px; /* Margen */
+    color: #000000; /* Color de texto */
+}
+
+input[type="text"], /* Caja de texto */
+input[type="password"] { /* Caja de texto */
+    width: calc(100% - 20px); /* Ancho */
+    padding: 8px 10px; /* Espacio alrededor del texto */
+    margin-bottom: 20px; /* Margen */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 4px; /* Borde redondeado */
+}
+
+input[type="submit"] { /* Botón */
+    background: #405a77; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Relleno */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    width: 100%; /* Ancho */
+}
+
+input[type="submit"]:hover { /* Botón al pasar por encima */
+    background: #a2bfdf; /* Color de fondo al pasar por encima */
+}
+
+a { /* Enlace */
+    display: block; /* Mostrar como bloque */
+    margin-top: 20px; /* Margen */
+    color: #007bff; /* Color de texto */
+    text-decoration: none; /* Sin decoración de enlace */
+}
+
+a:hover { /* Enlace al pasar por encima */
+    text-decoration: underline; /* Decoración de enlace al pasar por encima */
+}
+
+/* Estilos para el botón "Registrarse" */
+.registro-usuario button[type="submit"] {
+    width: 80%; /* Ancho completo del botón */
+    padding: 10px; /* Relleno dentro del botón */
+    margin: 20px auto; /* Margen superior e inferior */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    background-color: #437dad; /* Color de fondo */
+    color: white; /* Color de texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Efecto hover para el botón "Registrarse" */
+.registro-usuario button[type="submit"]:hover {
+    background-color: #0a1546; /* Cambio de color de fondo al pasar por encima */
+}
+
+/* Estilos para el enlace "Volver a Inicio de Sesión" */
+.login-button {
+    width: 80%; /* Ancho completo del enlace */
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin: 20px auto; /* Margen superior */
+    color: #f7f5f5; /* Color de texto */
+    text-decoration: none; /* Sin decoración de texto */
+    font-size: 14px; /* Tamaño de fuente */
+    transition: color 0.3s; /* Transición suave del color de texto */
+    text-align: center; /* Alinear texto al centro */
+    border-radius: 5px;
+    padding: 10px; /* Relleno dentro del enlace */
+    background-color: transparent; /* Color de fondo */
+    border: none; /* Sin borde */
+}
+
+
+
+

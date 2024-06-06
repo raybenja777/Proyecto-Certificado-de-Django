@@ -1,0 +1,31 @@
+<!--lista_pedidos.html-->
+{% extends 'dashboard.html' %} <!-- Extender la plantilla dashboard -->
+
+{% block content %} <!-- Cuerpo de la plantilla -->
+<h2>Lista de Pedidos</h2> <!-- Título -->
+<table>
+    <thead>
+        <tr>
+            <th>Tipo</th> <!-- Encabezado de la tabla -->
+            <th>Producto</th> <!-- Encabezado de la tabla -->
+            <th>Cantidad</th> <!-- Encabezado de la tabla -->
+            <th>Fecha</th> <!-- Encabezado de la tabla -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for pedido in pedidos %} <!-- Ciclo para mostrar los pedidos -->
+        <tr>
+            <td>{{ pedido.tipo }}</td> <!-- Celda para mostrar el tipo de pedido -->
+            <td>{{ pedido.producto.nombre }}</td> <!-- Celda para mostrar el nombre del producto -->
+            <td>{{ pedido.cantidad }}</td> <!-- Celda para mostrar la cantidad del pedido -->
+            <td>{{ pedido.fecha }}</td> <!-- Celda para mostrar la fecha del pedido -->
+            <td>
+                <a href="{% url 'pedido-update' pedido.pk %}" class="editar">Editar</a> <!-- Botón para editar el pedido -->
+                <a href="{% url 'pedido-delete' pedido.pk %}" class="eliminar">Eliminar</a> <!-- Botón para eliminar el pedido -->
+            </td>
+            </tr>
+            {% endfor %} <!-- Fin del ciclo -->
+        </tbody>
+</table>
+<a href="{% url 'pedido-create' %}" class="boton-nuevo-pedido">Nuevo Pedido</a> <!-- Botón para crear un nuevo pedido -->
+{% endblock %} <!-- Fin del bloque de la plantilla -->

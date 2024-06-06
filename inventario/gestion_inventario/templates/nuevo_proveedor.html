@@ -1,0 +1,21 @@
+<!--nuevo_proveedor.html-->
+{% load static %} <!-- Carga el directorio static -->
+<!DOCTYPE html>
+<html lang="es"> <!-- Lenguaje de la página -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala de la página -->
+    <title>Nuevo Proveedor</title> <!-- Título de la página -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nuevo_proveedor.css' %}"> <!-- Enlaza el archivo CSS -->
+</head>
+<body>
+    <div class="nuevo-proveedor"> <!-- Contenedor principal -->
+        <h2>Nuevo Proveedor</h2> <!-- Título de la página -->
+        <form method="post"> <!-- Formulario -->
+            {% csrf_token %} <!-- Token CSRF -->
+            {{ form.as_p }} <!-- Envía los datos del formulario -->
+            <input type="submit" value="Guardar"> <!-- Botón 'Guardar' -->
+        </form>
+    </div>
+</body>
+</html>

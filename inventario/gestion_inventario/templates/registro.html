@@ -1,0 +1,40 @@
+<!-- registro.html-->
+{% load static %} <!-- Cargar archivos estáticos -->
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala inicial del dispositivo -->
+    <title>Registro de Usuario</title> <!-- Título de la página -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registro.css' %}"> <!-- Enlazar archivo CSS -->
+</head>
+<body>
+    <div class="video_background"> <!-- Div para el video de fondo -->
+        <video autoplay loop muted> <!-- Video de fondo con play automatico, repetición y muteado -->
+            <source src="{% static 'css/videos/pastel-gradient.mp4' %}" type="video/mp4"> <!-- Fuente del video -->
+            Tu navegador no soporta videos HTML5 <!-- Mensaje de error -->
+        </video>
+    </div>
+    <div class="registro-usuario"> <!-- Div para el formulario -->
+        <h2>Registro de Usuario</h2> <!-- Título del formulario -->
+        <form method="post" action="{% url 'registro' %}"> <!-- Formulario para registrar usuario -->
+            {% csrf_token %} <!-- Token CSRF -->
+            <label for="username">Nombre de Usuario:</label><br>  <!-- Etiqueta para el campo de nombre de usuario -->
+            <input type="text" id="username" name="username"><br> <!-- Campo de entrada para el nombre de usuario -->
+            <label for="password1">Contraseña:</label><br> <!-- Etiqueta para el campo de contraseña -->
+            <input type="password" id="password1" name="password1"><br> <!-- Campo de entrada de la contraseña -->
+            <label for="password2">Confirmar Contraseña:</label><br> <!-- Etiqueta para el campo de confirmación de contraseña -->
+            <input type="password" id="password2" name="password2"><br><br> <!-- Campo de entrada de la confirmación de contraseña -->
+            <button type="submit" class="registro-button" onclick="submitFormAndRedirect()">Registrarse</button> <!-- Botón de registro -->
+            <button class="login-button"><a href="{% url 'login' %}">Volver a inicio de sesión</a></button> <!-- Botón de inicio de sesión -->
+        </form>
+    </div>
+    <script>
+        function submitFormAndRedirect() { // Función para enviar el formulario y redireccionar
+            document.querySelector('form').submit(); // Envía el formulario
+            window.location.href = "{% url 'login' %}"; // Redirige a la página de inicio de sesión
+        }
+    </script>
+</body>
+</html>
+

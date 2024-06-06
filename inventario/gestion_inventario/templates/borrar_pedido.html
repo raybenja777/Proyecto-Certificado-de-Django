@@ -1,0 +1,21 @@
+<!--borrar_pedido.html-->
+{% load static %} <!-- Cargar el archivo static -->
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma de la página -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala de la página -->
+    <title>Borrar Pedido</title> <!-- Título de la página -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/borrar_pedido.css' %}"> <!-- Enlazar el archivo CSS -->
+</head>
+<body>
+    <div class="borrar-pedido"> <!-- Contenedor de la página -->
+        <h2>¿Estás seguro de que deseas eliminar este pedido?</h2> <!-- Título de la página -->
+        <form method="post"> <!-- Formulario para enviar los datos --> 
+            {% csrf_token %} <!-- Token de seguridad -->
+            <input type="submit" value="Sí, borrar"> <!-- Botón para enviar los datos -->
+        </form>
+        <a href="{% url 'pedido-list' %}" class="cancelar">Cancelar</a> <!-- Botón para cancelar la operación -->
+    </div>
+</body>
+</html>

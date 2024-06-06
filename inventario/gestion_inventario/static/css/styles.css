@@ -1,0 +1,143 @@
+/* static/css/styles.css */
+
+body { /* Estilos generales */
+    font-family: Tahoma, sans-serif; /* Fuente */
+    margin: 0; /* Margen */
+    padding: 0; /* Espacio entre elementos */
+    display: flex; /* Mostrar como un contenedor flexible */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+body, html { /* Estilos de video de fondo */
+    height: 100%; /* Altura */
+    margin: 0; /* Margen */
+    font-family: Tahoma, sans-serif; /* Fuente */
+}
+
+.video_background { /* Estilos de video de fondo */
+    position: fixed; /* Posición fija */
+    top: 0; /* Posición fija */
+    left: 0; /* Posición fija */
+    width: 100%; /* Ancho */
+    height: 100%; /* Altura */
+    overflow: hidden; /* Oculta el contenido que sobrepasa el margen */
+    z-index: -1; /* Posición fija */
+}
+
+.video_background video { /* Estilos de video de fondo */
+    width: 100%; /* Ancho */
+    height: 100%; /* Altura */
+    object-fit: cover; /* Cubre el margen */
+}
+
+.login-container { /* Contenedor de inicio de sesion */
+    position: absolute; /* Posición fija */
+    top: 50%; /* Posición fija */
+    left: 50%; /* Posición fija */
+    transform: translate(-50%, -50%); /* Centrar horizontalmente y verticalmente */
+    background: rgba(255, 255, 255, 0.26); /* Color de fondo */
+    padding: 40px; /* Espacio entre elementos */
+    border-radius: 10px; /* Borde redondeado */
+    color: #000; /* Color del texto */
+    text-align: center; /* Alinear texto al centro */
+    width: 300px; /* Ancho */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    
+}
+
+.login-container h2 { /* Titulo de inicio de sesion */
+    margin-bottom: 20px; /* Espacio entre elementos */
+    
+}
+
+.login-container input[type="text"], /* Caja de texto de inicio de sesion */
+.login-container input[type="password"] { /* Caja de texto de inicio de sesion */
+    width: 85%; /* Ancho */
+    padding: 8px 10px; /* Espacio alrededor del texto */
+    margin: 15px 5px; /* Espacio entre elementos */
+    border: 0.3vw solid #ccc; /* Borde */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.login-container input[type="submit"] { /* Boton inicio de sesion */
+    width: 80%; /* Ancho */
+    padding: 10px; /* Espacio alrededor del texto */
+    margin: 10px 0; /* Espacio entre elementos */
+    border: none; /* Eliminar borde */
+    border-radius: 10px; /* Borde redondeado */
+    background-color: #0a1546; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    
+}
+
+.login-container input[type="submit"]:hover { /* Boton inicio de sesion al pasar por encima */
+    background-color: #437dad; /* Color de fondo al pasar sobre el botón */
+} 
+
+.login-container a { /* Boton de registrarse */
+    display: inline-block; /* Mostrar como un bloque en línea */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    background-color: #112355; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-align: center; /* Alinear texto al centro */
+    text-decoration: none; /* Eliminar decoración de enlace */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    font-size: 14px; /* Tamaño de fuente */
+    text-decoration: none !important; /* Eliminar decoración de enlace */
+}
+
+.login-container a:hover { /* Boton de registrarse al pasar por encima */
+    background-color: #4569a0; /* Cambiar color de fondo al pasar sobre el botón */
+}
+
+h2 { /* Titulo */
+    margin-bottom: 20px; /* Espacio entre elementos */
+    color: #000; /* Color del texto */
+}
+
+label { /* Etiqueta */
+    display: block; /* Mostrar como un bloque en línea */
+    margin: 0.1px; /* Espacio entre elementos */
+    color: #000000; /* Color del texto */
+}
+
+input[type="text"], /* Caja de texto */
+input[type="password"] { /* Caja de texto */
+    width: calc(100% - 20px); /* Ancho */
+    padding: 8px 10px; /* Espacio alrededor del texto */
+    margin-bottom: 20px; /* Espacio entre elementos */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 4px; /* Borde redondeado */
+}
+
+input[type="submit"] { /* Boton */
+    background: #405a77; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Eliminar borde */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    width: 100%; /* Ancho */
+}
+
+input[type="submit"]:hover { /* Boton al pasar por encima */
+    background: #a2bfdf; /* Color de fondo al pasar sobre el botón */
+}
+
+a { /* Enlace */
+    display: block; /* Mostrar como un bloque en línea */
+    margin-top: 20px; /* Espacio entre elementos */
+    color: #007bff; /* Color del texto */
+    text-decoration: none; /* Eliminar decoración de enlace */
+}
+
+a:hover { /* Enlace al pasar por encima */
+    text-decoration: underline; /* Decoración de enlace al pasar por encima */
+}
+

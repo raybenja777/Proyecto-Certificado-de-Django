@@ -1,0 +1,29 @@
+<!--crear_pedido.html-->
+<!DOCTYPE html>
+<html lang="es"> <!-- Lenguaje de la página -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tamaño de la ventana -->
+    <title>Crear Pedido</title> <!-- Título de la página -->
+</head>
+<body>
+    <h2>Crear Pedido</h2> <!-- Título de la página -->
+    <form method="post"> <!-- Formulario para enviar los datos -->
+        {% csrf_token %} <!-- Token CSRF -->
+        <label for="tipo">Tipo de Pedido:</label><br> <!-- Etiqueta para el campo de tipo de pedido -->
+        <select id="tipo" name="tipo"> <!-- Campo de tipo de pedido -->
+            <option value="Compra">Compra</option> <!-- Opción para el campo de tipo de pedido, comprar -->
+            <option value="Venta">Venta</option> <!-- Opción para el campo de tipo de pedido, vender -->
+        </select><br>
+        <label for="producto">Producto:</label><br> <!-- Etiqueta para el campo de producto -->
+        <select id="producto" name="producto"> <!-- Campo de producto -->
+            {% for producto in productos %} <!-- Ciclo para mostrar los productos -->
+            <option value="{{ producto.id }}">{{ producto.nombre }}</option> <!-- Opción para el campo de producto -->
+            {% endfor %} <!-- Fin del ciclo -->
+        </select><br>
+        <label for="cantidad">Cantidad:</label><br> <!-- Etiqueta para el campo de cantidad -->
+        <input type="number" id="cantidad" name="cantidad"><br><br> <!-- Campo de cantidad -->
+        <input type="submit" value="Crear Pedido"> <!-- Botón para enviar los datos -->
+    </form>
+</body>
+</html>

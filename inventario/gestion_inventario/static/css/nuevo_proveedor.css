@@ -1,0 +1,64 @@
+body { /* Estilos para el cuerpo de la página */
+    font-family: Tahoma, sans-serif; /* Fuente de texto */
+    margin: 0px; /* Margen del cuerpo */
+    padding: 0px; /* Margen del cuerpo */
+    display: flex; /* Mostrar el cuerpo en flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Centrar verticalmente */
+    height: 100vh; /* Altura del cuerpo */
+    background: linear-gradient(to bottom, #0a1546, #437dad); /* Gradiente de fondo */
+    color: white; /* Color del texto */
+}
+
+.nuevo_proveedor { /* Estilos para el formulario de nuevo proveedor */
+    background: #fff; /* Fondo del formulario */
+    padding: 40px; /* Margen del formulario */
+    border-radius: 15px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+    width: 400px; /* Ancho del formulario */
+    color: white; /* Color del texto */
+    margin-top: 80px; /* Margen superior del formulario */
+}
+
+h2 { /* Estilos para el título */
+    margin-bottom: 20px; /* Margen inferior del título */
+    text-align: center; /* Centrar el texto */
+    color: #f8f4f4; /* Color del título */
+}
+
+form { /* Estilos para el formulario */
+    display: flex; /* Mostrar el formulario en flexbox */
+    flex-direction: column; /* Mostrar el formulario en columnas */
+}
+
+form p { /* Estilos para el parrafo */
+    margin-bottom: 15px; /* Margen inferior del parrafo */
+}
+
+input[type="text"], /* Estilos para los campos de texto */
+input[type="submit"] { /* Estilos para los botones */
+    padding: 10px; /* Relleno del campo de texto */
+    margin: 5px 0; /* Margen del campo de texto */
+    border-radius: 5px; /* Borde redondeado */
+    border: 1px solid #ccc; /* Borde del campo de texto */
+    width: calc(100% - 22px); /* Ancho del campo de texto */
+    box-sizing: border-box; /* Tamaño del campo de texto */
+}
+
+textarea { /* Estilos para el textarea */
+    resize: none; /* Evitar que el textarea cambie de tamaño */
+    height: 40px; /* Altura del textarea */
+    border-radius: 5px; /* Borde redondeado */
+    width: calc(100% - 22px); /* Ancho del textarea */
+}
+
+input[type="submit"] { /* Estilos para el botón de enviar */
+    background-color: #0a1546; /* Color de fondo del botón */
+    color: white;   /* Color del texto del botón */
+    border: none;  /* Borde del botón */
+    cursor: pointer; /* Cursor del botón */
+}
+
+input[type="submit"]:hover { /* Estilos para el hover del botón de enviar */
+    background-color: #437dad; /* Color de fondo del botón al pasar el cursor */
+}

@@ -1,0 +1,95 @@
+body { /* Estilos generales */
+    font-family: Tahoma, sans-serif; /* Fuente de texto */
+    margin: 0px; /* Margen exterior */
+    padding: 0px; /* Margen interior */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Centrar verticalmente */
+    height: 100vh; /* Altura */
+    background: linear-gradient(to bottom, #c5410d, #ad8843); /* Fondo */
+    color: white; /* Color de texto */
+    
+}
+
+.borrar-pedido { /* Estilos del contenedor principal */
+    background: #ffffff3f; /* Fondo */
+    padding: 40px; /* Margen */
+    border-radius: 15px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 400px; /* Ancho */
+    color: white; /* Color de texto */
+    margin-top: 80px; /* Margen superior */
+    
+}
+
+h2 { /* Estilos del encabezado */
+    margin-bottom: 20px; /* Margen inferior */
+    text-align: center; /* Centrar texto */
+    color: #f8f4f4; /* Color de texto */
+    border:#9b0d0d; /* Borde */
+    
+}
+
+form { /* Estilos del formulario */
+    display: flex; /* Mostrar elementos en línea */
+    flex-direction: column; /* Mostrar elementos en columnas */
+}
+
+form p { /* Estilos de los campos */
+    margin-bottom: 15px; /* Margen inferior */
+    width: 100%; /* Ancho */
+}
+
+input[type="text"], /* Estilos de los campos de texto */
+input[type="submit"] { /* Estilos de los campos de texto */
+    padding: 10px; /* Margen */
+    margin: 5px 0; /* Margen */
+    border-radius: 5px; /* Borde redondeado */
+    border: 1px solid #ccc; /* Borde */
+    width: calc(100% - 22px); /* Ancho */
+    box-sizing: border-box; /* Ajustar el ancho de los campos de texto */
+}
+
+textarea { /* Estilos de los campos de texto */
+    resize: none; /* No redimensionar el texto */
+    height: 40px; /* Alto */
+    border-radius: 5px; /* Borde redondeado */
+    width: calc(100% - 22px); /* Ancho */
+}
+
+input[type="submit"] { /* Estilos de los campos de texto */
+    background-color: #9b0d0d; /* Fondo */
+    color: white; /* Color de texto */
+    border: none; /* Borde */
+    cursor: pointer; /* Cursor de puntero */
+    width: 100%; /* Ancho */
+    
+}
+
+input[type="submit"]:hover { /* Estilos de los campos de texto */
+    background-color: #af3636; /* Fondo */
+}
+
+.cancelar { /* Estilo del boton cancelar */
+    margin-top: 20px; /* Margen superior */
+    width: 100%; /* Ancho */
+    background-color: rgb(11, 11, 73); /* Fondo */
+    color: white; /* Color de texto */
+    box-sizing: border-box; /* Ajustar el ancho de los campos de texto */
+    padding: 10px; /* Margen */
+    border-radius: 5px; /* Borde redondeado */
+    border: none; /* Borde */
+    cursor: pointer; /* Cursor de puntero */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Eliminar subrayado */
+    display: inline-block; /* Mostrar elementos en línea */
+    font-size: 13px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Margen */
+    transition-duration: 0.3s; /* Duración de la transición */
+    
+}
+
+.cancelar:hover { /* Estilo del boton cancelar al pasar el puntero */
+    background-color: rgb(41, 47, 138); /* Fondo */
+    color: white; /* Color de texto */
+}

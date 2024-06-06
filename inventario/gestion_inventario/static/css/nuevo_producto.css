@@ -1,0 +1,65 @@
+body { /* Estilos generales */
+    font-family: Tahoma, sans-serif; /* Fuente por defecto */
+    margin: 0px; /* Margen por defecto */
+    padding: 0px; /* Padding por defecto */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Centrar verticalmente */
+    height: 100vh; /* Altura de 100% de la pantalla */
+    background: linear-gradient(to bottom, #0a1546, #437dad); /* Gradiente de fondo */
+    color: white; /* Color del texto */
+}
+
+.nuevo_producto { /* Estilos del contenedor */
+    background: #fff; /* Color de fondo */
+    padding: 40px; /* Padding */
+    border-radius: 15px; /* Redondear bordes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 400px; /* Ancho */
+    color: white; /* Color del texto */
+    margin-top: 80px; /* Margen superior */
+}
+
+h2 { /* Estilos del titulo */
+    margin-bottom: 20px; /* Margen inferior */
+    text-align: center; /* Centrar el texto */
+    color: #f8f4f4; /* Color del texto */
+}
+
+form { /* Estilos del formulario */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Columnas */
+}
+
+form p { /* Estilos de los campos */
+    margin-bottom: 15px; /* Margen inferior */
+    width: 100%; /* Ancho */
+}
+
+input[type="text"], /* Estilos de los campos de texto */
+input[type="submit"] { /* Estilos de los botones */
+    padding: 10px; /* Padding */
+    margin: 5px 0; /* Margen */
+    border-radius: 5px; /* Redondear bordes */
+    border: 1px solid #ccc; /* Borde */
+    width: calc(100% - 22px); /* Ancho */
+    box-sizing: border-box; /* Caja */
+}
+
+textarea { /* Estilos de la caja de texto */
+    resize: none; /* No redimensionar */
+    height: 40px; /* Alto */
+    border-radius: 5px; /* Redondear bordes */
+    width: calc(100% - 22px); /* Ancho */
+}
+
+input[type="submit"] { /* Estilos de los botones */
+    background-color: #0a1546; /* Fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde */
+    cursor: pointer; /* Cursor */
+}
+
+input[type="submit"]:hover { /* Estilos de los botones al pasar el cursor */
+    background-color: #437dad; /* Fondo */
+}

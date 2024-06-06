@@ -1,0 +1,66 @@
+body { /* Estilos para el cuerpo de la página */
+    font-family: Tahoma, sans-serif; /* Fuente de letra */
+    margin: 0px; /* Margen de la página */
+    padding: 0px; /* Espacio interno de la página */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Centrar verticalmente */
+    height: 100vh; /* Altura de la página */
+    background: linear-gradient(to bottom, #0a1546, #437dad); /* Gradiente de fondo */
+    color: white; /* Color del texto */
+}
+
+.nuevo-pedido { /* Estilos para el nuevo pedido */
+    background: #ffffff3f; /* Fondo del nuevo pedido */
+    padding: 40px; /* Espacio interno del nuevo pedido */
+    border-radius: 15px; /* Borde redondeado del nuevo pedido */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del nuevo pedido */
+    width: 400px; /* Ancho del nuevo pedido */
+    color: white; /* Color del texto */
+    margin-top: 80px; /* Margen superior del nuevo pedido */
+}
+
+h2 { /* Estilos para el título */
+    margin-bottom: 20px; /* Margen inferior del título */
+    text-align: center; /* Centrar el texto */
+    color: #f8f4f4; /* Color del texto */
+}
+
+form { /* Estilos para el formulario */
+    display: flex; /* Mostrar elementos en línea */
+    flex-direction: column; /* Mostrar elementos en columna */
+}
+
+form p { /* Estilos para el parrafo */
+    margin-bottom: 15px; /* Margen inferior del parrafo */
+    width: 100%; /* Ancho del parrafo */
+}
+
+input[type="text"], /* Estilos para los campos de texto */
+input[type="submit"] { /* Estilos para los botones */
+    padding: 10px; /* Espacio interno del campo de texto */
+    margin: 5px 0; /* Margen superior y inferior del campo de texto */
+    border-radius: 10px; /* Borde redondeado del campo de texto */
+    border: 1px solid #ccc; /* Borde del campo de texto */
+    width: calc(100% - 22px); /* Ancho del campo de texto */
+    box-sizing: border-box; /* Ancho del campo de texto */
+} 
+
+textarea { /* Estilos para el textarea */
+    resize: none; /* No redimensionar el textarea */
+    height: 40px; /* Alto del textarea */
+    border-radius: 5px; /* Borde redondeado del textarea */
+    width: calc(100% - 22px); /* Ancho del textarea */
+}
+
+input[type="submit"] { /* Estilos para el botón */
+    background-color: #0a1546; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde del botón */
+    cursor: pointer; /* Cursor del botón */
+    width: 100%; /* Ancho del botón */
+}
+
+input[type="submit"]:hover { /* Estilos del botón al pasar el cursor */
+    background-color: #437dad; /* Color de fondo al pasar el cursor */
+}

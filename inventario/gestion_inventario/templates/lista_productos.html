@@ -1,0 +1,33 @@
+<!-- lista_productos.html -->
+{% extends 'dashboard.html' %} <!-- Cargar la plantilla dashboard -->
+
+{% block content %} <!-- Cuerpo de la plantilla -->
+<h2>Lista de Productos</h2> <!-- Titulo de la plantilla -->
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th> <!-- Encabezado de la tabla -->
+            <th>Descripción</th> <!-- Encabezado de la tabla -->
+            <th>Proveedor</th> <!-- Encabezado de la tabla -->
+            <th>Precio</th> <!-- Encabezado de la tabla -->
+            <th>Stock</th> <!-- Encabezado de la tabla -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %} <!-- Cuerpo de la tabla -->
+        <tr>
+            <td>{{ producto.nombre }}</td> <!-- Celda para mostrar el nombre del producto -->
+            <td>{{ producto.descripcion }}</td> <!-- Celda para mostrar la descripción del producto -->
+            <td>{{ producto.proveedor.nombre }}</td> <!-- Celda para mostrar el nombre del proveedor -->
+            <td>{{ producto.precio }}</td> <!-- Celda para mostrar el precio del producto -->
+            <td>{{ producto.stock }}</td> <!-- Celda para mostrar el stock del producto -->
+            <td>
+                <a href="{% url 'producto-update' producto.pk %}" class="editar">Editar</a> <!-- Celda para editar el producto -->
+                <a href="{% url 'producto-delete' producto.pk %}" class="eliminar">Eliminar</a> <!-- Celda para eliminar el producto -->
+            </td>
+            </tr>
+            {% endfor %} <!-- Fin del cuerpo de la tabla -->
+    </tbody>
+</table>
+<a class="boton-nuevo-producto" href="{% url 'producto-create' %}">Nuevo Producto</a> <!-- Celda para crear un nuevo producto -->
+{% endblock %} <!-- Fin del cuerpo de la plantilla -->

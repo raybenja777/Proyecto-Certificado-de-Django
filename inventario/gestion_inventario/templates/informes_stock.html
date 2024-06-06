@@ -1,0 +1,23 @@
+<!--informes_stock.html-->
+{% extends 'dashboard.html' %} <!-- Extender la plantilla de dashboard -->
+
+{% block content %} <!-- Contenido de la plantilla -->
+<h2>Informe de Stock</h2> <!-- Título -->
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th> <!-- Encabezado de la tabla -->
+            <th>Stock</th> <!-- Encabezado de la tabla -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %} <!-- Ciclo para mostrar los productos -->
+        <tr>
+            <td>{{ producto.nombre }}</td> <!-- Celda para mostrar el nombre del producto -->
+            <td>{{ producto.stock }}</td> <!-- Celda para mostrar el stock del producto -->
+        </tr>
+            {% endfor %} <!-- Fin del ciclo -->
+        </tbody>
+</table>
+<button class="boton-grafico-stock" onclick="window.location.href='{% url 'grafico_stock' %}'">Ver Gráfico de Stock</button> <!-- Botón para mostrar el gráfico de stock -->
+{% endblock %} <!-- Fin del contenido de la plantilla -->

@@ -1,0 +1,30 @@
+<!--lista_proveedores.html-->
+{% extends 'dashboard.html' %} <!-- Cargar la plantilla dashboard -->
+
+{% block content %} <!-- Cuerpo de la plantilla -->
+<h2>Lista de Proveedores</h2> <!-- Título -->
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th> <!-- Encabezado de la tabla -->
+            <th>Teléfono</th> <!-- Encabezado de la tabla -->
+            <th>Dirección</th> <!-- Encabezado de la tabla -->
+            <th>Acciones</th> <!-- Encabezado de la tabla -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for proveedor in proveedores %} <!-- Cuerpo de la tabla -->
+        <tr>
+            <td>{{ proveedor.nombre }}</td> <!-- Celda para mostrar el nombre del proveedor -->
+            <td>{{ proveedor.telefono }}</td> <!-- Celda para mostrar el teléfono del proveedor -->
+            <td>{{ proveedor.direccion }}</td> <!-- Celda para mostrar la dirección del proveedor -->
+            <td>
+                <a href="{% url 'proveedor-update' proveedor.pk %}" class="editar">Editar</a> <!-- Celda para editar el proveedor -->
+                <a href="{% url 'proveedor-delete' proveedor.pk %}" class="eliminar">Eliminar</a> <!-- Celda para eliminar el proveedor -->
+            </td>
+        </tr>
+        {% endfor %} <!-- Fin del cuerpo de la tabla -->
+    </tbody>
+</table>
+<a class="boton-nuevo-proveedor" href="{% url 'proveedor-create' %}">Nuevo Proveedor</a> <!-- Celda para crear un nuevo proveedor -->
+{% endblock %} <!-- Fin del cuerpo de la plantilla -->

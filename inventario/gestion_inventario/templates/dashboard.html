@@ -1,0 +1,33 @@
+<!-- dashboard.html -->
+{% load static %} <!-- Cargar archivos estáticos -->
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala de visualización -->
+    <title>Dashboard</title> <!-- Título de la página -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}"> <!-- Enlazar archivo CSS -->
+</head>
+<body>
+    <div class="dashboard-container"> <!-- Contenedor -->
+        <div class="panel"> <!-- Panel -->
+            <h2>¡Bienvenido, {{ username }}!</h2> <!-- Título -->
+            <ul class="dashboard-menu"> <!-- Lista de opciones -->
+                <li><a href="{% url 'proveedor-list' %}">Proveedores</a></li> <!-- Enlace a lista de proveedores -->
+                <li><a href="{% url 'producto-list' %}">Productos</a></li> <!-- Enlace a lista de productos -->
+                <li><a href="{% url 'pedido-list' %}">Pedidos</a></li> <!-- Enlace a lista de pedidos -->
+                <li><a href="{% url 'informe-stock' %}">Informe de Stock</a></li> <!-- Enlace a informe de stock -->
+                <li>
+                   <form method="post" action="{% url 'logout' %}"> <!-- Formulario para cerrar sesión -->
+                       {% csrf_token %} <!-- Token CSRF -->
+                       <button type="submit" class="logout-button">Cerrar Sesión</button> <!-- Botón para cerrar sesión -->
+                   </form>
+               </li>
+           </ul>
+       </div>
+       <div class="proveedores-content"> <!-- Contenido -->
+           {% block content %}{% endblock %} <!-- Bloque de contenido -->
+       </div>
+    </div>
+</body>
+</html>

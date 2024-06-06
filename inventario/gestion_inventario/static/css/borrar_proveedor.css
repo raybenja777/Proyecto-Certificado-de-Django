@@ -1,0 +1,95 @@
+body { /* Estilos para el cuerpo de la página */
+    font-family: Tahoma, sans-serif; /* Fuente de letra */
+    margin: 0px; /* Margen de la página */
+    padding: 0px; /* Borde de la página */
+    display: flex; /* Centrar el contenido */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: flex-start; /* Centrar el contenido verticalmente */
+    height: 100vh; /* Altura de la página */
+    background: linear-gradient(to bottom, #c5410d, #ad8843); /* Fondo de la página, color degradado */
+    color: white; /* Color del texto */
+    
+}
+
+.borrar-proveedor { /* Estilos para el formulario */
+    background: #ffffff3f; /* Color de fondo */
+    padding: 40px; /* Espacio de relleno */
+    border-radius: 15px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 400px; /* Ancho del formulario */
+    color: white; /* Color del texto */
+    margin-top: 80px; /* Margen superior */
+    
+}
+
+h2 { /* Estilos para el título */
+    margin-bottom: 20px; /* Margen inferior */
+    text-align: center; /* Centrar el texto */
+    color: #f8f4f4; /* Color del texto */
+    border:#9b0d0d; /* Borde del título */
+    
+}
+
+form { /* Estilos para el formulario */
+    display: flex; /* Centrar el formulario */
+    flex-direction: column; /* Dirección del formulario */
+}
+
+form p { /* Estilos para el parrafo */
+    margin-bottom: 15px; /* Margen inferior */
+    width: 100%; /* Ancho del parrafo */
+}
+
+input[type="text"], /* Estilos para los campos de texto */ 
+input[type="submit"] { /* Estilos para los botones */
+    padding: 10px; /* Espacio de relleno */
+    margin: 5px 0; /* Margen */
+    border-radius: 5px; /* Borde redondeado */
+    border: 1px solid #ccc; /* Borde */
+    width: calc(100% - 22px); /* Ancho del campo de texto */
+    box-sizing: border-box; /* Caja de contenido */
+}
+
+textarea { /* Estilos para el campo de texto de descripción */
+    resize: none; /* No redimensionar el campo de texto */
+    height: 40px; /* Alto del campo de texto */
+    border-radius: 5px; /* Borde redondeado */
+    width: calc(100% - 22px); /* Ancho del campo de texto */
+}
+
+input[type="submit"] { /* Estilos para el botón */
+    background-color: #9b0d0d; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Borde */
+    cursor: pointer; /* Cursor */
+    width: 100%; /* Ancho del botón */
+    
+}
+
+input[type="submit"]:hover { /* Estilos para el botón al pasar el cursor */
+    background-color: #af3636; /* Color de fondo al pasar el cursor */
+}
+
+.cancelar { /* Estilos para el botón de cancelar */
+    margin-top: 20px; /* Margen superior */
+    width: 100%; /* Ancho del botón */
+    background-color: rgb(11, 11, 73); /* Color de fondo */
+    color: white; /* Color del texto */
+    box-sizing: border-box; /* Caja de contenido */
+    padding: 10px; /* Espacio de relleno */
+    border-radius: 5px; /* Borde redondeado */
+    border: none; /* Borde */
+    cursor: pointer; /* Cursor */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Eliminar el subrayado */
+    display: inline-block; /* Mostrar el botón en línea */
+    font-size: 13px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen */
+    transition-duration: 0.3s; /* Duración de la transición */
+    
+}
+
+.cancelar:hover { /* Estilos para el botón de cancelar al pasar el cursor */
+    background-color: rgb(41, 47, 138); /* Color de fondo al pasar el cursor */
+    color: white; /* Color del texto al pasar el cursor */
+}

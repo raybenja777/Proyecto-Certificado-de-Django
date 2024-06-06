@@ -1,0 +1,20 @@
+<!-- templates/grafico_stock.html -->
+{% load static %} <!-- Cargar archivos estáticos como CSS, Javascript, etc. -->
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma de la página -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala de la página -->
+    <title>Gráfico de Stock</title> <!-- Título de la página -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/grafico_stock.css' %}"> <!-- Enlazar archivo CSS -->
+</head>
+<body>
+    <div class="container"> <!-- Contenedor de la página -->
+        <h2>Gráfico de Stock</h2> <!-- Título de la página -->
+        <img src="data:image/png;base64,{{ graphic }}" alt="Gráfico de Stock"> <!-- Imagen del gráfico -->
+        <br><br>
+        <button class="boton-volver-stock" onclick="window.location.href='{% url 'informe-stock' %}'">Volver al Informe de Stock</button> <!-- Botón para volver al informe de stock -->
+        <button class="boton-descargar-stock" onclick="window.location.href='{% url 'descargar_grafico_stock' %}'">Descargar Gráfico</button> <!-- Botón para descargar el gráfico -->
+    </div>
+</body>
+</html>

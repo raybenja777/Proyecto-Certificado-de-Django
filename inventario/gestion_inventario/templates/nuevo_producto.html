@@ -1,0 +1,21 @@
+<!--nuevo_producto.html-->
+{% load static %} <!-- cargar archivos estaticos -->
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma de la página -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala de la página -->
+    <title>Nuevo Producto</title> <!-- Título de la página -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nuevo_producto.css' %}"> <!-- Enlazar el archivo CSS -->
+</head>
+<body>
+    <div class="nuevo-producto"> <!-- Div para centrar el contenido -->
+        <h2>Nuevo Producto</h2> <!-- Título -->
+        <form method="post"> <!-- Formulario para enviar los datos -->
+            {% csrf_token %} <!-- Token CSRF -->
+            {{ form.as_p }} <!-- Envía los datos del formulario -->
+            <input type="submit" value="Guardar"> <!-- Botón para enviar los datos -->
+        </form>
+    </div>
+</body>
+</html>
