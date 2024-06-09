@@ -45,3 +45,8 @@ Este proyecto es un sistema de gestión de inventarios desarrollado con Django, 
 
 Este proyecto fue creado por Randy Benjamín Cuevas Sánchez.
 
+
+## Errores
+
+Todo me funcionaba perfectamente antes de subir el proyecto al repositorio, pero por alguna razon ahora no me registra usuarios nuevos, asi que en tal caso de que se presente el mismo problema en este repositorio, agradeceria un monton que no se corrija el proyecto hasta que pueda actualizar el repositorio, mil gracias de antemano.
+
