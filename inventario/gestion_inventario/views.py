@@ -29,8 +29,12 @@ class LoginList(FormView): # Clase que permite el inicio de sesión
     success_url = reverse_lazy('dashboard')
     
     def form_valid(self, form):
-        login(self.request, form.get_user())  # Autentica al usuario
-        return super().form_valid(form)
+        user = form.get_user()
+        if user is not None:
+            login(self.request, user)  # Autentica al usuario
+            return super().form_valid(form)
+        else:
+            return self.form_invalid(form)
     
 class RegistroList(CreateView): # Clase que permite el registro
     template_name = 'registro.html'

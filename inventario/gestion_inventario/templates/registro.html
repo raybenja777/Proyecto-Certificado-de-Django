@@ -19,22 +19,24 @@
         <h2>Registro de Usuario</h2> <!-- Título del formulario -->
         <form method="post" action="{% url 'registro' %}"> <!-- Formulario para registrar usuario -->
             {% csrf_token %} <!-- Token CSRF -->
+            {{ form.non_field_errors }}
             <label for="username">Nombre de Usuario:</label><br>  <!-- Etiqueta para el campo de nombre de usuario -->
             <input type="text" id="username" name="username"><br> <!-- Campo de entrada para el nombre de usuario -->
+            {{ form.username.errors }}
+            <br>
             <label for="password1">Contraseña:</label><br> <!-- Etiqueta para el campo de contraseña -->
-            <input type="password" id="password1" name="password1"><br> <!-- Campo de entrada de la contraseña -->
+            <input type="password" id="password1" name="password1"> <!-- Campo de entrada de la contraseña -->
+            {{ form.password1.errors }}
+            <br>
             <label for="password2">Confirmar Contraseña:</label><br> <!-- Etiqueta para el campo de confirmación de contraseña -->
-            <input type="password" id="password2" name="password2"><br><br> <!-- Campo de entrada de la confirmación de contraseña -->
-            <button type="submit" class="registro-button" onclick="submitFormAndRedirect()">Registrarse</button> <!-- Botón de registro -->
+            <input type="password" id="password2" name="password2"> <!-- Campo de entrada de la confirmación de contraseña -->
+            {{ form.password2.errors }}
+            <br><br>
+            <button type="submit" class="registro-button">Registrarse</button> <!-- Botón de registro -->
             <button class="login-button"><a href="{% url 'login' %}">Volver a inicio de sesión</a></button> <!-- Botón de inicio de sesión -->
         </form>
     </div>
-    <script>
-        function submitFormAndRedirect() { // Función para enviar el formulario y redireccionar
-            document.querySelector('form').submit(); // Envía el formulario
-            window.location.href = "{% url 'login' %}"; // Redirige a la página de inicio de sesión
-        }
-    </script>
+    
 </body>
 </html>
 
