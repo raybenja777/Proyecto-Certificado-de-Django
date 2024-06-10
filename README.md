@@ -45,3 +45,4 @@ Este proyecto es un sistema de gestión de inventarios desarrollado con Django, 
 
 Este proyecto fue creado por Randy Benjamín Cuevas Sánchez.
 
+
